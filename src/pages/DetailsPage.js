@@ -3,7 +3,7 @@ function DetailsPage() {
         <div>
             <h2>SHOW TITLE</h2>
             <p>SHOW DESCRIPTION</p>
-            <p><img src="http" alt="me"/>SHOW COVER IMAGE</p>
+            <p><img src="" alt="" />SHOW COVER IMAGE</p>
             <p>EPISODE LIST</p>
         </div>
     );
