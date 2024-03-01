@@ -1,28 +1,28 @@
+import React from "react";
 import { useEffect, useState } from "react";
 
 import DetailsPage from "./pages/DetailsPage";
-import { fetchTvShows } from "./http";
-
 
 
 function App() {
-  const [show, setShow] = useState('');
+  const [data, setData] = useState([])
+  
+  const url = "https://api.tvmaze.com/shows?q=powerpuffgirls";
+
+  const fetchInfo = async () => {
+    const response = await fetch(url);
+    const resData = await response.json()
+    setData(resData);
+  }
+
 
   useEffect(() => {
-    async function fetchShows() {
-      try {
-        const shows = await fetchTvShows();
-        setShow(shows);
-      } catch(error) {
-        throw new Error("Couldn't fetch");
-      }
-    } 
-    fetchShows();
+    fetchInfo();
   }, []);
 
   return (
     <>
-      <DetailsPage title={show} />
+      <DetailsPage Tvdata={data} />
     </>
   );
 }
