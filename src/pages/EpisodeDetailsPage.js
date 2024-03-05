@@ -20,15 +20,15 @@ function EpisodeDetailsPage() {
     return (
         <>
             <ul className="show-data">
-                    {data.map((tvData) => (
-                        <li className="datas-list" key={tvData.id}>
-                            <img src={tvData.image.original} alt="" />
-                            <div className="mapped-text">
-                                <h1>{tvData.name}</h1>
-                                <p>{tvData.summary.replace(/<[^>]+>/g, '')}</p>
-                            </div>
-                        </li>
-                    ))}
+                {data.map((tvData) => (
+                    <li className="datas-list" key={tvData.id}>
+                        <img src={tvData.image.original} alt="" />
+                        <div className="mapped-text">
+                            <h1>{tvData.name}</h1>
+                            <p>{tvData.summary.replace(/<[^>]+>/g, '')}</p>
+                        </div>
+                    </li>
+                ))}
             </ul>
         </>
     );
