@@ -11,7 +11,7 @@ function App() {
 
   const fetchInfo = async () => {
     const response = await fetch(url);
-    const resData = await response.json()
+    const resData = await response.json();
     setData(resData);
   }
 
