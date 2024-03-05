@@ -1,14 +1,31 @@
+import React from "react";
+import { useEffect, useState } from "react";
 
-function DetailsPage({ Tvdata }) {
+
+function DetailsPage() {
+    const [data, setData] = useState([])
+    
+    const url = "https://api.tvmaze.com/shows?q=powerpuffgirls";
+
+    const fetchInfo = async () => {
+        const response = await fetch(url);
+        const resData = await response.json();
+        setData(resData);
+    }
+
+    useEffect(() => {
+        fetchInfo();
+    }, []);
+
     return (
         <div className="show-container">
         <ul className="show-data">
-            {Tvdata.map((dataObj) => (
-                <li className="datas-list" key={dataObj.id}>
-                    <img src={dataObj.image.original} alt="" />
+            {data.map((tvData) => (
+                <li className="datas-list" key={tvData.id}>
+                    <img src={tvData.image.original} alt="" />
                     <div className="mapped-text">
-                        <h1>{dataObj.name}</h1>
-                        <p>{dataObj.summary}</p>
+                        <h1>{tvData.name}</h1>
+                        <p>{tvData.summary}</p>
                     </div>
                 </li>
             ))}
