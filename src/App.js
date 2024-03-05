@@ -3,12 +3,19 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import RootLayout from "./pages/Root";
 import ErrorPage from "./pages/Error";
+import EpisodeDetailsPage from "./pages/EpisodeDetailsPage";
+import ShowPage from "./pages/ShowPage";
+
 
 const router = createBrowserRouter([
   { 
     path: "/", 
     element: <RootLayout />, 
-    errorElement: <ErrorPage />
+    errorElement: <ErrorPage />, 
+    children: [
+      {index: true, element: <ShowPage />},
+      {path: "details", element: <EpisodeDetailsPage />},
+    ],
   }
 ]);
 
