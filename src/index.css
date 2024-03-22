@@ -50,28 +50,12 @@ body {
   padding-top: 0.8rem;
 }
 
+/*********************** For Show Details Page *********************/
+
+
 .show-container {
   background-color: #03d5ff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
-.center {
-  background: white;
-  border-radius: 1rem;
-  width: 80%;
-  margin: auto;
-  padding: 2rem;
-  line-height: 2;
-}
-
-.show-container h1 {
-  background: linear-gradient(40deg, #ea00ff, #ea00ff, #03d5ff, #03d5ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
 }
 
 

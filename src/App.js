@@ -3,8 +3,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import RootLayout from "./pages/Root";
 import ErrorPage from "./pages/Error";
-import EpisodeDetailsPage from "./pages/EpisodeDetailsPage";
-import ShowPage from "./pages/ShowPage";
+import EpisodeDetails from "./components/EpisodeDetails";
+import ShowDetails, { movieLoader } from "./components/ShowDetails";
 
 
 const router = createBrowserRouter([
@@ -13,10 +13,10 @@ const router = createBrowserRouter([
     element: <RootLayout />, 
     errorElement: <ErrorPage />, 
     children: [
-      {index: true, element: <ShowPage />},
-      {path: "details", element: <EpisodeDetailsPage />},
+      {index: true, element: <EpisodeDetails />},
     ],
-  }
+  },
+  {path: "details/:id", element: <ShowDetails />, loader: movieLoader },
 ]);
 
 function App() {
