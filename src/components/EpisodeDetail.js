@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import classes from "./EpisodeDetail.module.css"
 
 export default function EpisodeDetail({ tvData }) {
   return (
     <>
-        <div className="datas-list">
+        <div className={classes.detail}>
             <img src={tvData.image.original} alt="" />
-            <div className="mapped-text">
+            <div>
                 <h1>{tvData.name}</h1>
                 <p>{tvData.summary.replace(/<[^>]+>/g, '')}</p>
             </div>
