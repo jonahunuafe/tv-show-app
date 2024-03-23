@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import EpisodeDetail from "./EpisodeDetail";
+import classes from "./EpisodeDetails.module.css"
 
 function EpisodeDetails() {
     const [data, setData] = useState([]);
@@ -21,10 +22,12 @@ function EpisodeDetails() {
 
     return (
         <>
-            <ul className="show-data">
+            <ul>
                 {data.map((tvData) => (
-                    <div key={tvData.id} >
-                        <EpisodeDetail tvData={tvData} />
+                    <div className={classes.data}>
+                        <div key={tvData.id}>
+                            <EpisodeDetail tvData={tvData} />
+                        </div>
                         <Link to={`/details/${tvData.id}`}>Show Details</Link>
                     </div>
                 ))}

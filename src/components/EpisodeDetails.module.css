@@ -1,0 +1,21 @@
+.data {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    background-color: lightgray;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+@media(min-width: 768px) {
+    .data {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+}

@@ -6,7 +6,7 @@ export default function EpisodeDetail({ tvData }) {
     <>
         <div className={classes.detail}>
             <img src={tvData.image.original} alt="" />
-            <div>
+            <div className={classes.detailText}>
                 <h1>{tvData.name}</h1>
                 <p>{tvData.summary.replace(/<[^>]+>/g, '')}</p>
             </div>
