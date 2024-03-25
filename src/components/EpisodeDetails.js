@@ -13,9 +13,15 @@ function EpisodeDetails() {
     const url = "https://api.tvmaze.com/shows";
 
     const fetchInfo = async () => {
-        const response = await fetch(url);
-        const resData = await response.json();
-        setData(resData);
+        try {
+            const response = await fetch(url);
+            const resData = await response.json();
+            setData(resData);
+        } catch(error) {
+            setError("Error fetching data", error);
+        } finally {
+            setLoading(false);
+        }
     }
 
     useEffect(() => {
