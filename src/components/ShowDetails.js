@@ -4,6 +4,7 @@ function ShowDetails() {
     const show = useLoaderData({});
     return (
         <>
+            <img src={show.image.original} alt="" />
             <h2>{show.name}</h2>
             <p>{show.summary.replace(/<[^>]+>/g, '')}</p>
         </>
