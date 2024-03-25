@@ -7,6 +7,7 @@ import classes from "./EpisodeDetails.module.css"
 
 function EpisodeDetails() {
     const [data, setData] = useState([]);
+    const [error, setError] = useState("");
     const [loading, setLoading] useState(true);
     
     const url = "https://api.tvmaze.com/shows";
