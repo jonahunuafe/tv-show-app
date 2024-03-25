@@ -17,7 +17,7 @@ export default function EpisodeDetail({ tvData }) {
         <div className={classes.detail}>
           <img src={tvData.image.original} alt="" />
           <div className={classes.subDetail}>
-            <h1>{tvData.name}</h1>
+            <h2>{tvData.name}</h2>
             <p>{description.replace(/<[^>]+>/g, '')}</p>
             <button className={classes.btn}
               onClick={() => setShowFullDescription((prevState) => !prevState)}

@@ -1,8 +1,9 @@
 .showDetail {
-    width: 100%;
-    text-align: center;
+    width: 90%;
+    margin: auto;
+    text-align: center; 
     padding-top: 2rem;
-    outline: 1px solid green;
+    padding-bottom: 2rem;
 } 
 
 .showDetail p {
@@ -15,12 +16,23 @@
 }
 
 .showDetail img {
-    width: 90%;
+    width: 100%;
     height: 30vh;
     border-radius: 1rem;
 }
 
-.imgContainer {
-    width: 100%;
-    /* outline: 1px solid red; */
+.linkBtn {
+    background: darkblue;
+    border-radius: 0.3rem;
+    line-height: 1.2;
+    width: 50%;
+    padding: 0.5rem;
+    border: none;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.linkBtn a {
+    text-decoration: none;
+    color: white;
 }
