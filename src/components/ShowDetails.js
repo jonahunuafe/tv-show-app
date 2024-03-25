@@ -1,13 +1,16 @@
 import { useLoaderData } from "react-router-dom";
+import classes from "./ShowDetail.module.css";
 
 function ShowDetails() {
     const show = useLoaderData({});
     return (
-        <>
-            <img src={show.image.original} alt="" />
+        <div className={classes.showDetail}>
+            <div className={classes.imgContainer}>
+                <img src={show.image.original} alt="" />
+            </div>
             <h2>{show.name}</h2>
             <p>{show.summary.replace(/<[^>]+>/g, '')}</p>
-        </>
+        </div>
     );
 };
 

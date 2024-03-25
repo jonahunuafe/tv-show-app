@@ -1,0 +1,26 @@
+.showDetail {
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+    outline: 1px solid green;
+} 
+
+.showDetail p {
+    line-height: 1.5;
+}
+
+.showDetail h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.showDetail img {
+    width: 90%;
+    height: 30vh;
+    border-radius: 1rem;
+}
+
+.imgContainer {
+    width: 100%;
+    /* outline: 1px solid red; */
+}
