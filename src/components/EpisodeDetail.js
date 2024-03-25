@@ -16,7 +16,7 @@ export default function EpisodeDetail({ tvData }) {
     <>
         <div className={classes.detail}>
           <img src={tvData.image.original} alt="" />
-          <div className={classes.detailText}>
+          <div className={classes.subDetail}>
             <h1>{tvData.name}</h1>
             <p>{description.replace(/<[^>]+>/g, '')}</p>
             <button className={classes.btn}
@@ -25,7 +25,7 @@ export default function EpisodeDetail({ tvData }) {
               {showFullDescription ? "Less" : "More"}
             </button>
           </div>
-          <Link to={`/details/${tvData.id}`}>Show Details</Link>
+            <Link to={`/details/${tvData.id}`}>Show Details</Link>
         </div>
     </>
   )
