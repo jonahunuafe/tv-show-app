@@ -32,9 +32,7 @@ function EpisodeDetails() {
             {loading ? "Loading..." : (
                 <div className={classes.data}>
                     {data.map((tvData) => (
-                        <div key={tvData.id}>
-                            <EpisodeDetail tvData={tvData} />  
-                        </div>
+                        <EpisodeDetail tvData={tvData} key={tvData.id} />
                     ))}
                 </div>)
             }

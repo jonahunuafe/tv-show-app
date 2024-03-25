@@ -1,8 +1,8 @@
 .data {
-    width: 50%;
+    width: 90%;
     margin: auto;
     text-align: center;
-    background-color: lightgray;
+    /* background-color: lightgray; */
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     margin-top: 1rem;
@@ -10,14 +10,11 @@
     padding-bottom: 2rem;
 }
 
-.data a {
-    text-decoration: none;
-}
-
 
 @media(min-width: 768px) {
     .data {
         display: grid;
         grid-template-columns: repeat(3, 1fr); 
+        column-gap: 1.5rem;
     }
 }
