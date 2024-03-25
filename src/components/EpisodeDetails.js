@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import EpisodeDetail from "./EpisodeDetail";
 import classes from "./EpisodeDetails.module.css"
@@ -17,7 +16,7 @@ function EpisodeDetails() {
             const resData = await response.json();
             setData(resData);
         } catch(error) {
-            setError("Error fetching data", error);
+            setError("Error fetching data!", error);
         } finally {
             setLoading(false);
         }
@@ -29,14 +28,14 @@ function EpisodeDetails() {
 
     return (
         <>
-            {loading ? "Loading..." : (
+            {loading ? (<h2>Loading...</h2>) : (
                 <div className={classes.data}>
                     {data.map((tvData) => (
                         <EpisodeDetail tvData={tvData} key={tvData.id} />
                     ))}
                 </div>)
             }
-            {error}
+            <p className={classes.error}>{error}</p>
         </>
     );
 }

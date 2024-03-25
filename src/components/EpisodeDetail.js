@@ -1,7 +1,7 @@
-import React from 'react';
-import { useState } from 'react';
-import classes from "./EpisodeDetail.module.css"
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+import classes from "./EpisodeDetail.module.css"
 
 export default function EpisodeDetail({ tvData }) {
   const [showFullDescription, setShowFullDescription] = useState(false);
@@ -15,7 +15,7 @@ export default function EpisodeDetail({ tvData }) {
   return (
     <>
         <div className={classes.detail}>
-          <img src={tvData.image.original} alt="" />
+          <img src={tvData.image.original} alt="actors" />
           <div className={classes.subDetail}>
             <h2>{tvData.name}</h2>
             <p>{description.replace(/<[^>]+>/g, '')}</p>

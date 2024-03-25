@@ -36,3 +36,16 @@
     text-decoration: none;
     color: white;
 }
+
+@media(min-width: 768px) {
+    .showDetail {
+        width: 60%;
+        margin: auto;
+    }
+
+    .showDetail img {
+        width: 100%;
+        height: 60vh;
+        border-radius: 1rem;
+    }
+}
