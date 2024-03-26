@@ -6,15 +6,36 @@
 }
 
 header {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  background: linear-gradient(to right, 
+    rgba(255, 215, 255, 0) 0%, 
+    rgba(225, 255, 255, 0.5) 20%, 
+    rgba(255, 255, 255, 0) 61%), 
+    linear-gradient(rgb(97, 183, 217) 52%, 
+    rgb(224, 246, 255) 60%, 
+    rgb(19, 74, 163) 61%
+  );
+  background-clip: text; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  animation: wave 2000ms ease alternate infinite;
+  transition: all 0.4s ease;
   text-align: center;
   margin-top: 2rem;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.2;
-  letter-spacing: 0.1rem;
-  background-image: linear-gradient(to left, indigo, green, orange, red);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0 5px;
+  }
+  100% {
+    background-position: 100% 30px;
+  }
+}
+
+@media(min-width: 768px) {
+  header {
+    font-size: 2.5rem;
+  }
 }
