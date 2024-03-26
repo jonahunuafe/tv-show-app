@@ -28,6 +28,7 @@ function EpisodeDetails() {
 
     return (
         <>
+            
             {loading ? (<h2>Loading...</h2>) : (
                 <div className={classes.data}>
                     {data.map((tvData) => (
