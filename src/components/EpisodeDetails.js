@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+import Header from "./Header";
 import EpisodeDetail from "./EpisodeDetail";
 import classes from "./EpisodeDetails.module.css"
 
@@ -28,7 +29,7 @@ function EpisodeDetails() {
 
     return (
         <>
-            
+            <Header />
             {loading ? (<h2>Loading...</h2>) : (
                 <div className={classes.data}>
                     {data.map((tvData) => (
