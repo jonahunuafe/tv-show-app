@@ -13,16 +13,19 @@ header {
     rgba(225, 255, 255, 0.5) 20%, 
     rgba(255, 255, 255, 0) 61%), 
     linear-gradient(rgb(97, 183, 217) 52%, 
-    rgb(224, 246, 255) 60%, 
+    rgb(109, 182, 211) 60%, 
     rgb(19, 74, 163) 61%
   );
   background-clip: text; 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
-  animation: wave 2000ms ease alternate infinite;
-  transition: all 0.4s ease;
+  animation: wave 3000ms ease alternate infinite;
+  transition: all 0.5s ease;
   text-align: center;
-  margin-top: 2rem;
+  padding-top: 2rem;
+  width: 90%;
+  margin: auto;
+
 }
 
 @keyframes wave {

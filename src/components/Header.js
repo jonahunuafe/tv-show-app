@@ -1,6 +1,6 @@
 function Header() {
     return (
-        <header>Enjoy exciting and captivating movies</header>
+        <header>Enjoy exciting and captivating movies.</header>
     );
 }
 
