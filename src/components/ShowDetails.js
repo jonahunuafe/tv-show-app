@@ -18,9 +18,13 @@ function ShowDetails() {
 };
 
 const movieLoader = async ({ params }) => {
-    const res = await fetch(`https://api.tvmaze.com/shows/${params.id}`);
-    const data = res.json();
-    return data;
+    try {
+        const res = await fetch(`https://api.tvmaze.com/shows/${params.id}`);
+        const data = res.json();
+        return data;
+    } catch (error) {
+        console.log('Page data not found, try again', error);
+    }
 };
 
 export { ShowDetails as default, movieLoader };
