@@ -5,6 +5,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+  background: #135D66;
+}
+
 header {
   font-size: 1.5rem;
   font-family: sans-serif;
