@@ -6,6 +6,10 @@
     padding-bottom: 2rem;
 } 
 
+.showDetail p, .showDetail h2 {
+    color: #fff;
+}
+
 .showDetail p {
     line-height: 1.5;
 }
