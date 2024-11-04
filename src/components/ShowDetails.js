@@ -11,7 +11,7 @@ function ShowDetails() {
             <h2>{show.name}</h2>
             <p>{show.summary.replace(/<[^>]+>/g, '')}</p>
             <button className={classes.linkBtn}>
-                <Link to="/">Back to episode lists</Link>
+                <Link to="/">Back to movie lists</Link>
             </button>
         </div>
     );
